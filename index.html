@@ -3,102 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Collins Nyambury - Personal Website</title>
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Collins Otieno Nyambury</h1>
-        <p>Welcome to my personal website!</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Resume</a></li>
+                </ul>
+            </nav>
+            <div class="header_text">
+                <p>Software Engineer</p>
+                <h1>Hi, I am <span>Collins Otieno Nyambury</span><br></h1>
+            </div>
+        </div>
+    </div>
     
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Collins Nyambury is a former graduate from Daystar University <br> Nyambury is currently taking Software Engineering course at Moringa School.</p>
-
-        </section>
-
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="project">
-                <h3>Project Title</h3>
-                <p>Movie Ticket.</p>
-                <p>My Personal Website</p>
-                <p>Spare Parts Ordering System</p>
+    <!----------------About------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Image/Background.jpg" alt="Background">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving complex and challenging real-world problems.</p>
+                    <p>I have worked on technologies like Python, MySQL, HTML5, CSS, Java, and C++ during my bachelor's. I have 12 months of professional work experience which helped me strengthen my expertise.</p>
+                    <p>I am passionate about developing complex applications that solve real-world problems impacting millions of users.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="Opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="Opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="Opentab('education')">Education</p>
+                        <p class="tab-links" onclick="Opentab('education')">Programing Languages</p>
+                        <p class="tab-links" onclick="Opentab('education')">Projects</p>
+                        <p class="tab-links" onclick="Opentab('education')">GitHub Link</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interface</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android Applications</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Present</span><br>Designing Web/App Interfaces</li>
+                            <li><span>2019 - 2021</span><br>Web App Development</li>
+                            <li><span>2017 - 2019</span><br>Building Android Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>Degree</li>
+                            <li><span>2016</span><br>High School</li>
+                            <li><span>2014</span><br>Primary School</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <!-- Add more projects as needed -->
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, please reach out via email: <a href="mailto:nyamburycollins@gmail.com">nyamburycollins@gmail.com</a></p>
-        </section>
-
-        <section id="contact">
-          <h2>Contact Me</h2>
-          <form action="submit_form.php" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
-        </section>
-        
-
-        <section id="projects">
-          <h2>My Projects</h2>
-          <div class="project-gallery">
-            <div class="project">
-              <img src="project1.jpg" alt="Project Title">
-              <h3>Project Title 1</h3>
-              <p>Short description of your project.</p>
-              <a href="#" target="_blank">View Project</a>
+        </div>
+    </div>
+    
+    <!------------------Services-------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>My first Web Design</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App Design</h2>
+                    <p>My first Web Design</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-frame"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>My first Web Design</p>
+                    <a href="#">Learn more</a>
+                </div>
             </div>
-            <div class="project">
-              <img src="project2.jpg" alt="Project Title">
-              <h3>Project Title 2</h3>
-              <p>Short description of your project.</p>
-              <a href="#" target="_blank">View Project</a>
-            </div>
-            <!-- Add more needed -->
-          </div>
-        </section>
-
-        <section id="testimonials">
-          <h2>What People Say</h2>
-          <blockquote>
-            <p>"Your work is amazing! Keep it up!"</p>
-            <footer>- Happy Client</footer>
-          </blockquote>
-          <blockquote>
-            <p>"I loved collaborating with you on this project!"</p>
-            <footer>- Colleague</footer>
-          </blockquote>
-        </section>
-        
-        
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Collins Nyambury. All rights reserved.</p>
-    </footer>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Image/portfolio1.jpg" alt="Portfolio Item 1">
+                </div>
+                <div class="work">
+                    <img src="Image/portfolio2.jpg" alt="Portfolio Item 2">
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-    
-      <div class="social-media-links">
-        <a href="https://x.com/yourprofile" target="_blank">Twitter</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/NyamburyCollins?tab=repositories" target="_blank">GitHub</a>
-      </div>
-    </footer>
-    
+    <header></header>
+    <script>
+        function Opentab(tabName) {
+            // Functionality to switch between tabs can be implemented here
+        }
+    </script>
 </body>
 </html>

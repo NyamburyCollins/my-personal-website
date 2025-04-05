@@ -1,24 +1,46 @@
+/* Reset some default browser styles */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding: 20px;
-    background-color: #f9f9f9; /* Fallback color */
-    background-image: url('background.jpg'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
+    color: #333;
+    background-image: url(''); /* Path to your image */
+    background-size: cover; /* Cover fills the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-header {
-    background: rgba(51, 51, 51, 0.8);
-    color: #fff;
-    padding: 10px 0;
+
+#header {
+    background-image: url('Image/Replace.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    color: white;
+    padding: 20px 0;
     text-align: center;
+  }
+  
+
+.logo {
+    max-width: 150px; /* Set maximum logo width */
+}
+
+nav {
+    margin-bottom: 20px;
 }
 
 nav ul {
@@ -27,99 +49,131 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
-nav a {
-    color: #fff;
+nav ul li a {
+    color: white;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+nav ul li a:hover {
+    color: #ffc107; /* Change color on hover */
 }
 
-section {
-    flex: 1;
-    margin: 20px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #ddd;
-    min-width: 250px;
-}
-
-.project {
+.header_text h1 {
     margin: 10px 0;
-    border: 1px solid #ccc;
-    padding: 10px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: rgba(51, 51, 51, 0.8);
-    color: #fff;
+.header_text span {
+    font-weight: bold;
+    font-size: 24px;
 }
 
-@media (max-width: 600px) {
-    nav ul {
-      display: block;
-    }
-    .container {
-      flex-direction: column;
-    }
-    section {
-      width: 100%;
-    }
-  }
+#about {
+    padding: 50px 0;
+    background-color: #f4f4f4; /* Light background for section */
+}
 
-  .project-gallery {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .project {
-    flex: 1 0 30%; /* Flex growth and shrinkage */
-    margin: 10px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .project img {
+.about-col-1 img {
     max-width: 100%;
     height: auto;
-  }
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input, textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
+.tab-titles {
+    margin: 20px 0;
+}
 
-  .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #28a745;
-    color: white;
+.tab-links {
+    display: inline-block;
+    margin: 0 15px;
     padding: 10px 15px;
     border-radius: 5px;
-    text-decoration: none;
-  }
+    cursor: pointer;
+    background-color: #007bff; /* Tab background */
+    color: white;
+}
+
+.tab-links.active-link {
+    background-color: #0056b3; /* Darker tab for active */
+}
+
+.tab-contents {
+    display: none; /* Hide all tab contents by default */
+}
+
+.tab-contents.active-tab {
+    display: block; /* Show active tab content */
+}
+
+#services {
+    padding: 50px 0;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around; /* Space between service elements */
+}
+
+.services-list div {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd; /* Slight border around service items */
+    border-radius: 5px;
+}
+
+.services-list div i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: flex;
+    justify-content: space-between; /* Align portfolio items */
+    flex-wrap: wrap; /* Wrap to next line if needed */
+}
+
+.work {
+    flex: 1 1 calc(33% - 20px); /* Flexible width for three items per row */
+    margin: 10px; /* Spacing */
+}
+
+.work img {
+    max-width: 100%; /* Responsive image */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0; /* Space before/after subtitle */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack navigation items vertically on mobile */
+        margin: 10px 0;
+    }
+
+    .services-list {
+        flex-direction: column; /* Stack services on mobile */
+    }
+
+    .work {
+        flex: 1 1 100%; /* Stack portfolio items on mobile */
+    }
+}
